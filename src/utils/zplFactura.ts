@@ -102,48 +102,116 @@ export const zplFactura = async (): Promise<string> => {
     ${generarTextoAlineado('CRA 11 24 LA GLORIETA', 380, 125, 430)},
     ${generarTexto(40, 410, 'Codigo:', 20)}   
     ${generarTextoAlineado('1000001', 410, 100, 430)},
-    ${generarTexto(100, 440, 'Estrato:', 20)}   
-    ${generarTexto(280, 440, 'Ruta:', 20)}   
-    ${generarTexto(130, 470, '1C')}   
-    ${generarTexto(250, 470, '10010000')}   
+    ${generarTextoAlineado('Estrato', 440, 30, 215, 'center', 20)},
+    ${generarTextoAlineado('1C', 470, 30, 215, 'center')},
+    ${generarTextoAlineado('Ruta', 440, 215, 430, 'center', 20)},
+    ${generarTextoAlineado('10010000', 470, 215, 430, 'center')},
     ${generarLinea(30, 500, 400, 0)}  // Línea #2 interior Caja 5
-    ${generarTexto(80, 510, 'Numero de', 20)}   
-    ${generarTexto(90, 530, 'medidor:', 20)}   
-    ${generarTexto(280, 510, 'Novedad:', 20)}   
-    ${generarTexto(70, 550, '0000000000')}   
-    ${generarTexto(270, 530, 'MEDIDOR')}   
-    ${generarTexto(265, 555, 'INVERTIDO')}   
+    ${generarTextoAlineado('Numero de', 510, 30, 215, 'center')},
+    ${generarTextoAlineado('medidor', 530, 30, 215, 'center')},    
+    ${generarTextoAlineado('0000000000', 555, 30, 215, 'center')},     
+    ${generarTextoAlineado('Novedad', 510, 215, 430, 'center')},   
+    ${generarTextoAlineado('MEDIDOR', 535, 215, 430, 'center')},   
+    ${generarTextoAlineado('INVERTIDO', 555, 215, 430, 'center')},   
     ${generarLinea(30, 580, 400, 0)}  // Línea #3 interior Caja 5
-    ${generarTexto(50, 590, 'Lectura', 20)}   
-    ${generarTexto(50, 610, 'anterior:', 20)}   
-    ${generarTexto(140, 590, 'Lectura', 20)}   
-    ${generarTexto(145, 610, 'actual:', 20)}   
-    ${generarTexto(230, 600, 'Consumo:', 20)}   
-    ${generarTexto(345, 590, 'Consumo', 20)}   
-    ${generarTexto(340, 610, 'promedio:', 20)}   
-    ${generarTexto(50, 635, '1215')}   
-    ${generarTexto(145, 635, '1215')}   
-    ${generarTexto(260, 635, '0')}   
-    ${generarTexto(375, 635, '8')}   
+    ${generarTextoAlineado('Lectura', 590, 30, 130, 'center', 20)},   
+    ${generarTextoAlineado('anterior', 610, 30, 130, 'center', 20)},   
+    ${generarTextoAlineado('1215', 635, 30, 130, 'center')},    
+    ${generarTextoAlineado('Lectura', 590, 130, 230, 'center', 20)},   
+    ${generarTextoAlineado('actual', 610, 130, 230, 'center', 20)},   
+    ${generarTextoAlineado('1215', 635, 130, 230, 'center')},    
+    ${generarTextoAlineado('Consumo', 600, 230, 300, 'center', 20)},      
+    ${generarTextoAlineado('0', 635, 230, 330, 'center')},    
+    ${generarTextoAlineado('Consumo', 590, 330, 430, 'center', 20)},      
+    ${generarTextoAlineado('promedio', 610, 330, 430, 'center', 20)},      
+    ${generarTextoAlineado('8', 635, 330, 430, 'center')},    
     ${generarLinea(30, 665, 400, 0)}  // Línea inferior Caja 5
     // ??????????????????????????????????????????????????????????????
-
+    
     ${generarLinea(30, 680, 760, 0)}  // Línea superior Caja 6
-    ${generarTexto(70, 690, 'CONCEPTO', 20)}   
-    ${generarTexto(215, 690, 'M3', 20)}   
-    ${generarTexto(260, 690, 'VALOR UND', 20)}   
-    ${generarTexto(385, 690, 'ACUEDUCTO', 20)}   
-    ${generarTexto(510, 690, 'VALOR UND', 20)}   
-    ${generarTexto(635, 690, 'ALCANTARILLADO', 20)}   
+    ${generarTextoAlineado('CONCEPTO', 690, 30, 200, 'left', 20)},
+    ${generarTextoAlineado('M3', 690, 200, 250, 'left', 20)},
+    ${generarTextoAlineado('VALOR UND', 690, 250, 370, 'left', 20)}, 
+    ${generarTextoAlineado('ACUEDUCTO', 690, 370, 495, 'left', 20)},
+    ${generarTextoAlineado('VALOR UND', 690, 495, 625, 'left', 20)},
+    ${generarTextoAlineado('ALCANTARILLADO', 690, 625, 790, 'left', 20)},
     ${generarLinea(30, 710, 760, 0)}  // Línea interior horizontal #1 Caja 6
-    ${generarLinea(200, 680, 0, 600)}   // Línea interior vertical #1 Caja 6
-    ${generarLinea(250, 680, 0, 600)}   // Línea interior vertical #2 Caja 6
-    ${generarLinea(370, 680, 0, 600)}   // Línea interior vertical #3 Caja 6
-    ${generarLinea(495, 680, 0, 600)}   // Línea interior vertical #4 Caja 6
-    ${generarLinea(625, 680, 0, 600)}   // Línea interior vertical #5 Caja 6
-    ${generarLinea(30, 1280, 760, 0)}  // Línea inferior Caja 6
-    ${generarLinea(30, 680, 0, 600)}   // Línea left Caja 6
-    ${generarLinea(790, 680, 0, 600)}  // Línea right Caja 6
+    ${generarTextoAlineado('Cargo Fijo', 720, 30, 200, 'left', 17)},
+    ${generarTextoAlineado('Cons. Basico', 750, 30, 200, 'left', 17)},
+    ${generarTextoAlineado('Cons. Complementario', 780, 30, 200, 'left', 17)},
+    ${generarTextoAlineado('Cons. Suntuario', 810, 30, 200, 'left', 17)},
+    ${generarTextoAlineado('Subsidio/Contribucion', 840, 30, 200, 'left', 17)},
+    ${generarTextoAlineado('Tarifa Neta', 870, 30, 200, 'left', 17)},
+    ${generarTextoAlineado('Saldo Anterior', 900, 30, 200, 'left', 17)},
+    ${generarTextoAlineado('Interes Actual', 930, 30, 200, 'left', 17)},
+    ${generarTextoAlineado('Ajuste', 960, 30, 200, 'left', 17)},
+    ${generarTextoAlineado('Matricula', 990, 30, 200, 'left', 17)},
+    ${generarTextoAlineado('Medidor', 1020, 30, 200, 'left', 17)},
+    ${generarTextoAlineado(
+      'Materiales Instalacion',
+      1050,
+      30,
+      200,
+      'left',
+      17,
+    )},
+    ${generarTextoAlineado(
+      'Cta. de Refinanciacion',
+      1080,
+      30,
+      200,
+      'left',
+      17,
+    )},
+    ${generarTextoAlineado('Cuotas Anteriores', 1110, 30, 200, 'left', 17)},
+    ${generarTextoAlineado('TOTAL A PAGAR', 1140, 30, 200, 'left', 17)},
+    ${generarLinea(200, 680, 0, 480)}   // Línea interior vertical #1 Caja 6
+    ${generarTextoAlineado('14', 750, 200, 250, 'center', 17)},
+    ${generarTextoAlineado('14', 780, 200, 250, 'center', 17)},
+    ${generarTextoAlineado('14', 810, 200, 250, 'center', 17)},
+    ${generarLinea(250, 680, 0, 480)}   // Línea interior vertical #2 Caja 6
+    ${generarTextoAlineado('1.442', 750, 250, 370, 'right', 17)},
+    ${generarTextoAlineado('1.442', 780, 250, 370, 'right', 17)},
+    ${generarTextoAlineado('1.442', 810, 250, 370, 'right', 17)},
+    ${generarTextoAlineado('50%', 840, 250, 360, 'right', 17)},
+    ${generarLinea(370, 680, 0, 480)}   // Línea interior vertical #3 Caja 6
+    ${generarTextoAlineado('14.442', 720, 370, 495, 'right', 17)},
+    ${generarTextoAlineado('14.442', 750, 370, 495, 'right', 17)},
+    ${generarTextoAlineado('14.442', 780, 370, 495, 'right', 17)},
+    ${generarTextoAlineado('14.442', 810, 370, 495, 'right', 17)},
+    ${generarTextoAlineado('14.442', 840, 370, 495, 'right', 17)},
+    ${generarTextoAlineado('14.442', 870, 370, 495, 'right', 17)},
+    ${generarTextoAlineado('14.442', 900, 370, 495, 'right', 17)},
+    ${generarTextoAlineado('14.442', 930, 370, 495, 'right', 17)},
+    ${generarTextoAlineado('14.442', 960, 370, 495, 'right', 17)},
+    ${generarTextoAlineado('14.442', 990, 370, 495, 'right', 17)},
+    ${generarTextoAlineado('14.442', 1020, 370, 495, 'right', 17)},
+    ${generarTextoAlineado('14.442', 1050, 370, 495, 'right', 17)},
+    ${generarTextoAlineado('14.442', 1080, 370, 495, 'right', 17)},
+    ${generarTextoAlineado('14.442', 1110, 370, 495, 'right', 17)},
+    ${generarLinea(495, 680, 0, 480)}   // Línea interior vertical #4 Caja 6
+    ${generarTextoAlineado('1.442', 750, 495, 625, 'right', 17)},
+    ${generarTextoAlineado('1.442', 780, 495, 625, 'right', 17)},
+    ${generarTextoAlineado('1.442', 810, 495, 625, 'right', 17)},
+    ${generarTextoAlineado('50%', 840, 495, 615, 'right', 17)},
+    ${generarLinea(625, 680, 0, 480)}   // Línea interior vertical #5 Caja 6
+    ${generarTextoAlineado('14.442', 720, 625, 790, 'right', 17)},
+    ${generarTextoAlineado('14.442', 750, 625, 790, 'right', 17)},
+    ${generarTextoAlineado('14.442', 780, 625, 790, 'right', 17)},
+    ${generarTextoAlineado('14.442', 810, 625, 790, 'right', 17)},
+    ${generarTextoAlineado('14.442', 840, 625, 790, 'right', 17)},
+    ${generarTextoAlineado('14.442', 870, 625, 790, 'right', 17)},
+    ${generarTextoAlineado('14.442', 900, 625, 790, 'right', 17)},
+    ${generarTextoAlineado('14.442', 930, 625, 790, 'right', 17)},
+    ${generarTextoAlineado('14.442', 960, 625, 790, 'right', 17)},
+    ${generarTextoAlineado('14.442', 990, 625, 790, 'right', 17)},
+    ${generarTextoAlineado('14.442', 1020, 625, 790, 'right', 17)},
+    ${generarTextoAlineado('14.442', 1050, 625, 790, 'right', 17)},
+    ${generarTextoAlineado('14.442', 1080, 625, 790, 'right', 17)},
+    ${generarTextoAlineado('14.442', 1110, 625, 790, 'right', 17)},
+    ${generarLinea(30, 1160, 760, 0)}  // Línea inferior Caja 6
+    ${generarLinea(30, 680, 0, 480)}   // Línea left Caja 6
+    ${generarLinea(790, 680, 0, 480)}  // Línea right Caja 6
     ^XZ`;
   return zpl;
 };
